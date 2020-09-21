@@ -2,6 +2,8 @@ const router = require('koa-router')()
 const jwt = require('jsonwebtoken')
 const passport = require('passport')
 
+const validateRegisterInput = require('../../../validator/register')
+
 router
   /**
    * @route GET /api/v1/user/test
@@ -23,6 +25,14 @@ router
    * @desc 注册
    */
   .post('/register', async ctx => {
+    const { errors, isValid } = validateRegisterInput(ctx.request.body)
+    // 判断是否通过验证
+    if (!isValid) {
+      ctx.status = 400
+      ctx.body = errors
+      return 
+    }
+
     Object.assign(ctx.body, { data: ctx.request.body })
   })
 
