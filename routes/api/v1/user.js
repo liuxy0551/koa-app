@@ -10,14 +10,8 @@ router
    * @desc 测试接口地址
    */
   .get('/test', async ctx => {
-    // const err = new Error('name required')
-    // err.status = 400
-    // err.expose = true
-    // throw err
-    ctx.throw(401, 'access_denied', { user: 1 });
-    return 
     ctx.status = 200
-    Object.assign(ctx.body, { msg: 'user test api...' })
+    Object.assign(ctx.body, { data: { msg: 'user test api...' } })
   })
 
   /**
