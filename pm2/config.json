@@ -2,22 +2,9 @@
   "name": "koa-app",
   "script": "./app.js",
   "cwd"   : "./",
-  "log_date_format": "YYYY-MM-DD HH:mm Z",
-  "instances": 2,
+  "log_date_format": "YYYY-MM-DD HH:mm:ss",
   "max_memory_restart": "500M",
-  "merge_logs": true,
-  "exec_mode": "cluster",
-  "kill_timeout" : 5000,
-  "ignore_watch": ["node_modules", "logs", "public"],
-  "watch_options": {
-    "followSymlinks": false
-  },
-  "error_file" : "./logs/pm2-err.log",
-  "out_file"   : "./logs/pm2-out.log",
-  "env": {
-    "NODE_ENV": "production"
-  },
-  "args": [
-    "--color"
-  ]
+  "log_file"   : "./pm2/logs/pm2-log.log",
+  "out_file"   : "./pm2/logs/pm2-out.log",
+  "error_file" : "./pm2/logs/pm2-err.log"
 }
