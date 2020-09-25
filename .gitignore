@@ -2,6 +2,8 @@
 node_modules
 /dist
 
+/pm2/logs
+
 /tests/e2e/reports/
 selenium-debug.log
 chromedriver.log
