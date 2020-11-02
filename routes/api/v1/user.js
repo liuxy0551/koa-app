@@ -11,7 +11,7 @@ router
    */
   .get('/test', async ctx => {
     ctx.status = 200
-    Object.assign(ctx.body, { data: { msg: 'user test api...' } })
+    Object.assign(ctx.body, { data: Object.assign({ msg: 'user test api...' }, ctx.query) })
   })
 
   /**
