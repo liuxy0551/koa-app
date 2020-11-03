@@ -16,6 +16,7 @@
     "koa": "^2.11.0",
     "koa-bodyparser": "^4.2.1",
     "koa-router": "^8.0.6",
+    "koa2-cors": "^2.0.6",
     "mysql": "^2.18.1"
   },
   "devDependencies": {
